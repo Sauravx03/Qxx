@@ -31,6 +31,12 @@ var server = http.createServer((req,res)=>{
         res.write("Hello World ! registration"); 
         res.end(); 
     }
+    if(req.url=="/database") 
+    {
+        res.writeHead(200,{"Content-Type":"text/plain"}); 
+        res.write("Hello World ! database"); 
+        res.end(); 
+    }
 });
 
 server.listen(PORT,()=>{
