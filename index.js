@@ -13,6 +13,12 @@ var server = http.createServer((req,res)=>{
         res.write("Hello World ! about"); 
         res.end(); 
     }
+    if(req.url=="/test") 
+    {
+        res.writeHead(200,{"Content-Type":"text/plain"}); 
+        res.write("Hello World ! test"); 
+        res.end(); 
+    }
     if(req.url=="/login") 
     {
         res.writeHead(200,{"Content-Type":"text/plain"}); 
