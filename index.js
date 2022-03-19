@@ -7,6 +7,12 @@ var server = http.createServer((req,res)=>{
         res.write("Hello World ! /");
         res.end();
     }
+    if(req.url=="/about") 
+    {
+        res.writeHead(200,{"Content-Type":"text/plain"}); 
+        res.write("Hello World ! about"); 
+        res.end(); 
+    }
 });
 
 server.listen(PORT,()=>{
